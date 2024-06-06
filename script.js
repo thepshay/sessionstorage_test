@@ -1,7 +1,11 @@
 window.addEventListener('load', () => {
   if (sessionStorage.getItem('tgb_app')) {
-    console.log(sessionStorage.getItem('tgb_app'))
-    console.log(`email ${sessionStorage.getItem('user_email')}`)
-    document.body.style.backgroundColor = 'red';
+    const targetElement = document.body;
+
+    const newDiv = document.createElement("div");
+    newDiv.textContent = `email: ${sessionStorage.getItem('user_email')}`
+    targetElement.appendChild(newDiv)
   }
+
+
 });
