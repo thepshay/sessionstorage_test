@@ -4,8 +4,25 @@
   <head>
     <title>Session Storage Test</title>
     <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript">
+      // Get the iframe element
+      var iframe = document.getElementById('body'); // Replace 'iframe-id' with the 
+        
+        
+        // Get the document of the iframe
+        var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+      
+        // Create a new script element
+        var script = iframeDoc.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://theguestbook.com/mews.js?w=goodhotellondon';
+      
+        // Append the script to the head of the iframe document
+        iframeDoc.head.appendChild(script);
+      </script>
   </head>
-  <body>
+  <body id="body">
     <div>Hello world!</div>
     <script src="script.js"></script>
   </body>
